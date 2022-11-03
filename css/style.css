@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+
+    /* base font styles */
+    color: white;
+    font-size: 20px;
+    line-height: 1.5em;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    padding: 80px 50px;
+}
+
+header .wrapper {
+    padding: 20px 50px;
+}
+
+.container {
+    max-width: 490px;
+    margin: auto;
+}
+
+header {
+    background-color: #585C7C;
+}
+
+.feature {
+    background-image: url("../imgs/Titan-Bkg.jpg");
+    background-size: cover;
+    background-position: center right;
+    min-height: 70vh;
+    display: flex;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10%;
+}
+
+.ships {
+    background-color: #F3D9B5;
+    color: #2B315E;
+}
+
+.ships-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5%;
+    text-align: center;
+    align-items: end;
+}
+
+.ships-grid .button {
+    grid-column: span 1;
+    justify-self: center;
+}
+
+.more-trips {
+    background: linear-gradient(114.63deg, #2B315E 21.29%, #1C214D 99.68%);
+}
+
+.img-text {
+    display: grid;
+    grid-template-columns: repeat(1
+, 1fr);
+    grid-gap: 5%;
+    align-items: center;
+}
+
+.img-text--alternate {
+    margin-top: 100px;
+}
+
+.img-text--alternate img {
+    grid-column: 2;
+}
+
+.img-text--alternate div {
+    grid-row: 3;
+    grid-column: 1;
+    text-align: center;
+}
+
+footer {
+    background-color: #101439;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5%;
+}
+
+.footer-grid div:nth-child(2) {
+    text-align: center;
+}
+
+.footer-grid div:last-child {
+    text-align: right;
+}
+
+/* COMPONENTS */
+
+.button {
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: .5s;
+    margin-top: 20px;
+}
+
+.button-blue {
+    background-color: #585C7C;
+}
+
+.button-blue:hover {
+    background-color: #101439;
+    color: white;
+}
+
+.button-gold {
+    background-color: #FFBC61;
+    text-shadow: 0px 0px 20px #ed9b28;
+}
+
+.button-gold:hover {
+    background-color: #ed9b28;
+    color: white;
+}
+
+
+/* TYPOGRAPHY */
+
+h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    /* margin: 0; */
+}
+
+h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    /* margin: 0; */
+}
+
+h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    /* margin: 0; */
+}
+
+h4 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 18px 0;
+}
+
+a {
+    color: #FFBC61;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #F3D9B5;
+}
+
+@media screen and (max-width:490){
+    .feature-grid{
+        grid-template-columns: 1fr;
+
+    }
+}
+
+.ships-grid {
+   
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5%;
+   
+}
+
+.ships-grid .button {
+    grid-column: span 1;
+    
+}
+
+
+.img-text {
+    grid-template-columns: repeat( 1fr);
+    align-items: center;
+}
+
+.img-text--alternate {
+    margin-top: 100px;
+}
+
+.img-text--alternate img {
+    grid-column: 1;
+}
+
+.img-text--alternate div {
+   grid-template-columns: 1fr;
+    text-align: center;
+}
